@@ -19,7 +19,7 @@ jobs:
             sleep 5
             sudo rm /var/lib/dpkg/lock
             sudo dpkg --configure -a
-            sudo apt-get install python3.12
+            sudo apt-get install python3.9
             sleep 5
             python -m pip install -r requirements.txt
         
