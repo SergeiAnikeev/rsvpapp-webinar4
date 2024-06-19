@@ -1,8 +1,6 @@
 version: 2
 jobs:
   test:
-    requires:
-     - setuptools
     machine:
       image: ubuntu-2004:2024.05.1
       docker_layer_caching: true
@@ -21,10 +19,7 @@ jobs:
             sudo rm /var/lib/dpkg/lock
             sudo dpkg --configure -a
             sudo apt-get install python3
-            sudo apt-get install python-setuptools
-            sudo apt-get install --reinstall python-pkg-resources
             sleep 5
-            python -m pip install --upgrade pip
             python -m pip install -r requirements.txt
         
       # run tests!
