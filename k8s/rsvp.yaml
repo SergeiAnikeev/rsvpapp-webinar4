@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: rsvp
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
       app: rsvp
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: rsvp-app
-        image: dev
+        image: nkhare/rsvpapp:dev
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
