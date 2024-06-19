@@ -19,6 +19,7 @@ jobs:
             sudo rm /var/lib/dpkg/lock
             sudo dpkg --configure -a
             sudo apt-get install python3
+            sudo apt-get install python-setuptools
             sleep 5
             python -m pip install -r requirements.txt
         
